@@ -17,7 +17,7 @@ Section: libdevel
 Architecture: any
 Multi-Arch: same
 Depends:
- libgz-plugin3 (= ${binary:Version}),
+ libgz-plugin4 (= ${binary:Version}),
  ${misc:Depends},
 Description: Cross-platform C++ library for dynamically loading plugins - development files
  Library for registering plugin libraries and dynamically loading them at
@@ -26,7 +26,7 @@ Description: Cross-platform C++ library for dynamically loading plugins - develo
  Gazebo Plugin is a component in the Gazebo framework, a set of libraries
  designed to rapidly develop robot applications.
 
-Package: libgz-plugin3
+Package: libgz-plugin4
 Architecture: any
 Multi-Arch: same
 Depends:
@@ -46,7 +46,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  ruby,
- libgz-plugin3 (= ${binary:Version}),
+ libgz-plugin4 (= ${binary:Version}),
 Description: Cross-platform C++ library for dynamically loading plugins
  Library for registering plugin libraries and dynamically loading them at
  runtime.
