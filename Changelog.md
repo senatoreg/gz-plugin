@@ -1,3 +1,26 @@
+## Gazebo Plugin 4.x
+
+### Gazebo Plugin 4.0.0 (2025-09-30)
+
+1. [Bazel] Update bazel module to use jetty release branches
+    * [Pull request #186](https://github.com/gazebosim/gz-plugin/pull/186)
+
+1. Use stable branch for gz-plugin4
+    * [Pull request #185](https://github.com/gazebosim/gz-plugin/pull/185)
+
+1. Improve robustness to whitespace in gz_TEST
+    * [Pull request #180](https://github.com/gazebosim/gz-plugin/pull/180)
+
+1. readme: mention plugin development tutorial
+    * [Pull request #181](https://github.com/gazebosim/gz-plugin/pull/181)
+
+1. Bump dependency versions of gz-cmake and others in jetty and remove version from package names
+    * [Pull request #175](https://github.com/gazebosim/gz-plugin/pull/175)
+    * [Release-tools issue #1309](https://github.com/gazebo-tooling/release-tools/issues/1309)
+
+1. Bump major version to 4
+    * [Pull request #155](https://github.com/gazebosim/gz-plugin/pull/155)
+
 ## Gazebo Plugin 3.x
 
 ### Gazebo Plugin 3.1.0 (2025-05-14)
@@ -9,8 +32,8 @@
 1. ci: run cppcheck, cpplint, doxygen on noble
     * [Pull request #172](https://github.com/gazebosim/gz-plugin/pull/172)
 
-1. used codespell to fix spellcheck errors (#168)
-    * [Pull request #169](https://github.com/gazebosim/gz-plugin/pull/#169)
+1. used codespell to fix spellcheck errors (#169)
+    * [Pull request #169](https://github.com/gazebosim/gz-plugin/pull/169)
 
 1. Update README.md - fix windows badge
     * [Pull request #166](https://github.com/gazebosim/gz-plugin/pull/166)
@@ -251,4 +274,3 @@
 ### Gazebo Plugin 1.0.0 (2019-02-05)
 
 1. Initial release
-

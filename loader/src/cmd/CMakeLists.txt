@@ -4,11 +4,17 @@ target_link_libraries(gz PUBLIC
   ${PROJECT_LIBRARY_TARGET_NAME}
 )
 
-set(plugin_executable gz-plugin)
+# Define the desired output name of the executable
+set(plugin_executable_output_name gz-plugin)
+# Append "-exe" to cmake target name to differ from the library target name
+set(plugin_executable gz-plugin-exe)
 add_executable(${plugin_executable} plugin_main.cc)
+set_target_properties(${plugin_executable}
+  PROPERTIES OUTPUT_NAME ${plugin_executable_output_name})
+
 target_link_libraries(${plugin_executable}
   gz
-  gz-utils${GZ_UTILS_VER}::cli
+  gz-utils::cli
   ${loader}
 )
 
@@ -24,7 +30,7 @@ install(
 #===============================================================================
 # Generate the ruby script for internal testing.
 # Note that the major version of the library is included in the name.
-# Ex: cmdplugin3.rb
+# Ex: cmdplugin4.rb
 set(cmd_script_generated_test "${CMAKE_BINARY_DIR}/test/lib/$<CONFIG>/ruby/gz/cmd${GZ_DESIGNATION}${PROJECT_VERSION_MAJOR}.rb")
 set(cmd_script_configured_test "${CMAKE_CURRENT_BINARY_DIR}/test_cmd${GZ_DESIGNATION}${PROJECT_VERSION_MAJOR}.rb.configured")
 
@@ -46,7 +52,7 @@ file(GENERATE
 # Used for the installed version.
 # Generate the ruby script that gets installed.
 # Note that the major version of the library is included in the name.
-# Ex: cmdplugin3.rb
+# Ex: cmdplugin4.rb
 set(cmd_script_generated "${CMAKE_CURRENT_BINARY_DIR}/$<CONFIG>/cmd${GZ_DESIGNATION}${PROJECT_VERSION_MAJOR}.rb")
 set(cmd_script_configured "${CMAKE_CURRENT_BINARY_DIR}/cmd${GZ_DESIGNATION}${PROJECT_VERSION_MAJOR}.rb.configured")
 
